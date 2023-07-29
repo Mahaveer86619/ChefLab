@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">ChefLab</string>
 
+    <string name="login">Log In</string>
+    <string name="signup">Sign Up</string>
+
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="re_password">Re-enter Password</string>
+
+    <string name="btn_continue">Continue</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="or">or</string>
+
+    <string name="log_in_with_google">Log In with Google</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="log_in_with_facebook">Log In with Facebook</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="new_to_chatsphere">New to ChatSphere</string>
+    <string name="have_an_account">Have an account</string>
 
 </resources>
