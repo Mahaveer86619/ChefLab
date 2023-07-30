@@ -6,23 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="@drawable/cheflab_bg"
-    tools:context=".screens.LoginScreen">
+    android:background="@color/bg_black"
+    tools:context=".screens.SigninScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/cheflab_bg"
         android:orientation="vertical"
         android:padding="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="center_horizontal"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/signup"
             android:textColor="@color/text_white"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:gravity="center_horizontal"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -32,80 +33,80 @@
             android:background="@drawable/logo_shape"
             android:backgroundTint="@color/grey"
             android:layout_margin="10dp"
-            android:padding="12dp"
-            android:gravity="center">
+            android:padding="12dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/chefhat"
-                android:paddingEnd="5dp"
-                android:contentDescription="@string/app_name"
-                tools:ignore="RtlSymmetry" />
-
+                android:src="@drawable/chefhat"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_medium"
-                android:paddingTop="5dp"
                 android:text="@string/app_name"
+                android:textSize="22sp"
                 android:textColor="@color/text_white"
-                android:textSize="22sp" />
+                android:paddingTop="5dp"
+                android:fontFamily="@font/poppins_medium"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:hint="@string/e_mail"
+                app:hintTextColor="@color/light_white"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/light_white"
+                app:boxBackgroundColor="@color/white_grey"
+                app:startIconDrawable="@drawable/mail_icon"
+                android:layout_marginBottom="14dp"
                 android:layout_marginTop="35dp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_email"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/e_mail"
-                    app:hintTextColor="@color/light_white"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/light_white"
-                    app:boxBackgroundColor="@color/white_grey"
-                    app:startIconDrawable="@drawable/mail_icon">
+                    android:inputType="textEmailAddress"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-            <LinearLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="14dp">
+                android:hint="@string/password"
+                app:hintTextColor="@color/light_white"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/light_white"
+                app:boxBackgroundColor="@color/white_grey"
+                app:startIconDrawable="@drawable/lock"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="14dp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_password"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password"
-                    app:hintTextColor="@color/light_white"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/light_white"
-                    app:boxBackgroundColor="@color/white_grey"
-                    app:startIconDrawable="@drawable/lock"
-                    app:passwordToggleEnabled="true">
+                    android:inputType="textPassword"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_reenter_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/re_password"
+                app:hintTextColor="@color/light_white"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/light_white"
+                app:boxBackgroundColor="@color/white_grey"
+                app:startIconDrawable="@drawable/lock"
+                app:passwordToggleEnabled="true">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
 
-            </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mb_continue"
@@ -116,22 +117,14 @@
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:padding="15dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
                 app:icon="@drawable/arrow_right"
                 app:iconTint="@color/white"
                 app:iconPadding="20dp"
                 app:iconGravity="textEnd"
                 app:cornerRadius="10dp"
                 android:backgroundTint="@color/grey"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/forgot_your_password"
-                android:textColor="@color/text_white"
-                android:textSize="18sp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="center_horizontal"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,12 +153,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="40dp">
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/mb_google"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/log_in_with_google"
+                    android:text="@string/sign_in_with_google"
                     android:textColor="@color/text_white"
                     android:textAllCaps="false"
                     android:textSize="18sp"
@@ -180,7 +173,7 @@
                     android:id="@+id/mb_facebook"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/log_in_with_facebook"
+                    android:text="@string/sign_in_with_facebook"
                     android:textColor="@color/text_white"
                     android:textAllCaps="false"
                     android:textSize="18sp"
@@ -203,11 +196,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/poppins_light"
-                    android:text="@string/alr"
+                    android:text="@string/have_an_account"
                     android:textColor="@color/text_white"
                     android:textSize="13sp" />
                 <TextView
-                    android:id="@+id/tv_to_sign_in"
+                    android:id="@+id/tv_to_log_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login"
