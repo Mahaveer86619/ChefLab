@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "888749152976",
+    "project_id": "cheflab-7ced0",
+    "storage_bucket": "cheflab-7ced0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888749152976:android:10a7945d61721b7c391cd5",
+        "android_client_info": {
+          "package_name": "com.se7en.cheflab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888749152976-madbbspqtftmtohtii1ec5fqa04o4psv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.se7en.cheflab",
+            "certificate_hash": "5bdd07db0845eb3dfedfbe32639c3e3d5679fd11"
+          }
+        },
+        {
+          "client_id": "888749152976-853er21u17hioc86a55o221bc1rn7osr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQdlHuNUIbnodOujcxXccOuTGqy035ueI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888749152976-853er21u17hioc86a55o221bc1rn7osr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
